@@ -29,10 +29,10 @@ public class GameController {
     public GameController (MainGamePanel mainGamePanel){
        mMainGamePanel = mainGamePanel;
        mCharacterPool = new CharacterPool();
-       mWidgetPool = new WidgetPool();
+       mWidgetPool = new WidgetPool(mCharacterPool);
        mBoardPool =  new BoardPool(mWidgetPool);
        mGameLogic = new GameLogic();
-       mainGamePanel.setCurrentBoard(loadBoard(BoardTypeEnum.TITLE));
+       mainGamePanel.setCurrentBoard(loadBoard(BoardTypeEnum.GAME_LEVEL));
     }
 
     public Board loadBoard(BoardTypeEnum boardType) {

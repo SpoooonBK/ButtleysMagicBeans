@@ -4,6 +4,8 @@ import android.graphics.Bitmap;
 import android.graphics.Canvas;
 
 import buttley.nyc.esteban.magicbeans.model.boards.widgets.BoardWidget;
+import buttley.nyc.esteban.magicbeans.model.characters.CharacterNamesEnum;
+import buttley.nyc.esteban.magicbeans.model.characters.CharacterPool;
 import buttley.nyc.esteban.magicbeans.model.characters.GameCharacter;
 import buttley.nyc.esteban.magicbeans.model.characters.beans.Bean;
 
@@ -13,8 +15,17 @@ import buttley.nyc.esteban.magicbeans.model.characters.beans.Bean;
 public class BeanStageWidget extends BoardWidget implements CharacterStage {
 
     private Bean bean;
+    private CharacterPool characterPool;
 
+    public BeanStageWidget(CharacterPool characterPool) {
+        this.characterPool = characterPool;
+        setBean();
 
+    }
+
+    public void setBean() {
+        bean = (Bean)characterPool.getGameCharacter(CharacterNamesEnum.BABY);
+    }
 
     @Override
     public void enterStage(GameCharacter character) {
@@ -38,6 +49,6 @@ public class BeanStageWidget extends BoardWidget implements CharacterStage {
 
     @Override
     public void draw(Canvas canvas) {
-
+        bean.draw(canvas);
     }
 }

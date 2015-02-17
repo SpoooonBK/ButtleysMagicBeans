@@ -7,6 +7,7 @@ import buttley.nyc.esteban.magicbeans.model.characters.GameCharacter;
  */
 public interface CharacterStage {
 
+
     public void enterStage(GameCharacter character);
     public void exitStageRight(GameCharacter character);
     public void exitStageLeft(GameCharacter character);

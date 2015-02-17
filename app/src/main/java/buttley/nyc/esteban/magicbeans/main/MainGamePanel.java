@@ -11,6 +11,7 @@ import android.view.SurfaceView;
 import buttley.nyc.esteban.magicbeans.controller.GameController;
 import buttley.nyc.esteban.magicbeans.logging.LoggerConfig;
 import buttley.nyc.esteban.magicbeans.model.boards.Board;
+import buttley.nyc.esteban.magicbeans.model.boards.BoardTypeEnum;
 
 /**
  * Created by Spoooon on 1/23/2015.
@@ -18,7 +19,6 @@ import buttley.nyc.esteban.magicbeans.model.boards.Board;
 public class MainGamePanel extends SurfaceView implements SurfaceHolder.Callback {
 
     private MainThread thread;
-    private Context context;
     private GestureDetector gestureDetector;
     private GameController mGameController;
     private Board mCurrentBoard;
@@ -30,6 +30,9 @@ public class MainGamePanel extends SurfaceView implements SurfaceHolder.Callback
         setFocusable(true);
         ContextHolder contextHolder = new ContextHolder(context);
         setGestures(context);
+        mGameController = new GameController(this);
+        mCurrentBoard = mGameController.loadBoard(BoardTypeEnum.GAME_LEVEL);
+
     }
 
 
@@ -61,7 +64,6 @@ public class MainGamePanel extends SurfaceView implements SurfaceHolder.Callback
 
     @Override
     public void surfaceCreated(SurfaceHolder holder) {
-        mGameController = new GameController(this);
 
         thread = new MainThread(getHolder(),this);
         thread.setRunning(true);

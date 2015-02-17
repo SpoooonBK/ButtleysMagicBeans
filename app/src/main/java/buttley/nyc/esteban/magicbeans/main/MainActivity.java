@@ -66,9 +66,9 @@ public class MainActivity extends Activity {
 
     //    loads all assets into Assets class
     public void loadAssets(){
-        loadBackgrounds();
         loadWidgetBitmaps();
         loadCharacterBitmaps();
+        loadBackgrounds();
         loadSounds();
         if(LoggerConfig.ON){
             Log.v(LoggerConfig.LOG_TAG, "assets loaded");

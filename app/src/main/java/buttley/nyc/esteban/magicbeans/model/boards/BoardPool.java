@@ -1,8 +1,11 @@
 package buttley.nyc.esteban.magicbeans.model.boards;
 
+import android.util.Log;
+
 import java.util.EnumMap;
 import java.util.Map;
 
+import buttley.nyc.esteban.magicbeans.logging.LoggerConfig;
 import buttley.nyc.esteban.magicbeans.model.boards.beanography.Beanography;
 import buttley.nyc.esteban.magicbeans.model.boards.gamelevels.GameLevel;
 import buttley.nyc.esteban.magicbeans.model.boards.soundboard.SoundBoard;
@@ -22,6 +25,10 @@ public class BoardPool {
 
         mBoardMap = new EnumMap<BoardTypeEnum, Board>(BoardTypeEnum.class);
         mWidgetPool = widgetPool;
+        loadAllBoards();
+        if(LoggerConfig.ON){
+            Log.v(LoggerConfig.LOG_TAG, "Board Pool created");
+        }
     }
 
     public Map<BoardTypeEnum, Board> getBoardMap() {

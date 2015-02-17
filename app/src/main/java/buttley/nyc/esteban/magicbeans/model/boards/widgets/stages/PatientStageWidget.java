@@ -4,6 +4,7 @@ import android.graphics.Bitmap;
 import android.graphics.Canvas;
 
 import buttley.nyc.esteban.magicbeans.model.boards.widgets.BoardWidget;
+import buttley.nyc.esteban.magicbeans.model.characters.CharacterPool;
 import buttley.nyc.esteban.magicbeans.model.characters.GameCharacter;
 import buttley.nyc.esteban.magicbeans.model.characters.patients.Patient;
 
@@ -13,7 +14,11 @@ import buttley.nyc.esteban.magicbeans.model.characters.patients.Patient;
 public class PatientStageWidget extends BoardWidget implements CharacterStage {
 
     private Patient patient;
+    private CharacterPool characterPool;
 
+    public PatientStageWidget(CharacterPool characterPool) {
+        this.characterPool = characterPool;
+    }
 
     @Override
     public void enterStage(GameCharacter character) {

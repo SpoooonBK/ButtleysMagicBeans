@@ -1,8 +1,11 @@
 package buttley.nyc.esteban.magicbeans.model.characters;
 
+import android.util.Log;
+
 import java.util.EnumMap;
 import java.util.Map;
 
+import buttley.nyc.esteban.magicbeans.logging.LoggerConfig;
 import buttley.nyc.esteban.magicbeans.model.characters.beans.AirBiscuit;
 import buttley.nyc.esteban.magicbeans.model.characters.beans.BabyBean;
 import buttley.nyc.esteban.magicbeans.model.characters.beans.BakedJake;
@@ -29,6 +32,9 @@ public class CharacterPool {
     public CharacterPool(){
         mCharacterMap = new EnumMap<CharacterNamesEnum, GameCharacter>(CharacterNamesEnum.class);
         loadAllCharacters();
+        if(LoggerConfig.ON){
+            Log.v(LoggerConfig.LOG_TAG, "Character Pool created");
+        }
     }
 
 
