@@ -19,6 +19,7 @@ public abstract class BoardWidget {
     }
     //TODO fix bitmaps
 
+
     public List<Bitmap> getmBitmaps() {
         return mBitmaps;
     }
@@ -27,8 +28,11 @@ public abstract class BoardWidget {
 
     }
 
-
+    //TODO change placeWidget to setStartingCoordinates
     public abstract void placeWidget(Bitmap bitmap);
 
     public abstract void draw(Canvas canvas);
+
+    public abstract void setStartingCoordinates();
+    public abstract void setStartingCoordinates(int X, int Y);
 }

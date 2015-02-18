@@ -5,6 +5,7 @@ import android.graphics.Canvas;
 import buttley.nyc.esteban.magicbeans.model.boards.Board;
 import buttley.nyc.esteban.magicbeans.model.boards.BoardTypeEnum;
 import buttley.nyc.esteban.magicbeans.model.boards.widgets.BackgroundWidget;
+import buttley.nyc.esteban.magicbeans.model.boards.widgets.BoardWidget;
 import buttley.nyc.esteban.magicbeans.model.boards.widgets.PoopMeterWidget;
 import buttley.nyc.esteban.magicbeans.model.boards.widgets.PowerUpBarWidget;
 import buttley.nyc.esteban.magicbeans.model.boards.widgets.ScoreBoardWidget;
@@ -48,6 +49,12 @@ public class GameLevel extends Board {
         setLevel();
         setMode();
         setPoopMeterLevel();
+
+    }
+
+    @Override
+    public void placeWidgets() {
+
 
     }
 

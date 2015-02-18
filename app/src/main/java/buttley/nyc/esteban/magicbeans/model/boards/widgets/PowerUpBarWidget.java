@@ -26,4 +26,14 @@ public class PowerUpBarWidget extends BoardWidget {
     public void draw(Canvas canvas) {
 
     }
+
+    @Override
+    public void setStartingCoordinates() {
+
+    }
+
+    @Override
+    public void setStartingCoordinates(int X, int Y) {
+
+    }
 }

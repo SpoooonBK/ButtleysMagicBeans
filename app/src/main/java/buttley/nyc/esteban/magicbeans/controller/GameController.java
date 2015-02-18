@@ -23,6 +23,7 @@ public class GameController {
     private WidgetPool mWidgetPool;
     private BoardPool mBoardPool;
     private MainGamePanel mMainGamePanel;
+    private Board mCurrentBoard;
 
 
 
@@ -32,11 +33,17 @@ public class GameController {
        mWidgetPool = new WidgetPool(mCharacterPool);
        mBoardPool =  new BoardPool(mWidgetPool);
        mGameLogic = new GameLogic();
-       mainGamePanel.setCurrentBoard(loadBoard(BoardTypeEnum.GAME_LEVEL));
+       setCurrentBoard(BoardTypeEnum.GAME_LEVEL);
+       mGameRunning = true;
     }
 
-    public Board loadBoard(BoardTypeEnum boardType) {
-        return mBoardPool.getBoard(boardType);
+    public void setCurrentBoard(BoardTypeEnum boardType) {
+        mCurrentBoard = mBoardPool.getBoard(boardType);
     }
+
+    public Board getCurrentBoard(){
+        return mCurrentBoard;
+    }
+
 
 }

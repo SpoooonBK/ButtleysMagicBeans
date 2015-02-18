@@ -44,4 +44,14 @@ public class PatientStageWidget extends BoardWidget implements CharacterStage {
     public void draw(Canvas canvas) {
 
     }
+
+    @Override
+    public void setStartingCoordinates() {
+
+    }
+
+    @Override
+    public void setStartingCoordinates(int X, int Y) {
+
+    }
 }

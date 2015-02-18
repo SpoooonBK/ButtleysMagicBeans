@@ -39,6 +39,16 @@ public class ButtleyStageWidget extends BoardWidget implements CharacterStage {
     }
 
     @Override
+    public void setStartingCoordinates() {
+
+    }
+
+    @Override
+    public void setStartingCoordinates(int X, int Y) {
+
+    }
+
+    @Override
     public void enterStage(GameCharacter character) {
 
     }

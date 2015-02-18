@@ -38,4 +38,14 @@ public class TitleWidget extends BoardWidget {
         }
 
     }
+
+    @Override
+    public void setStartingCoordinates() {
+
+    }
+
+    @Override
+    public void setStartingCoordinates(int X, int Y) {
+
+    }
 }

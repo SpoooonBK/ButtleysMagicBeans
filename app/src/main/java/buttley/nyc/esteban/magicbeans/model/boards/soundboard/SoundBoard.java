@@ -15,6 +15,11 @@ public class SoundBoard extends Board {
     }
 
     @Override
+    public void placeWidgets() {
+
+    }
+
+    @Override
     public void draw(Canvas canvas) {
 
     }

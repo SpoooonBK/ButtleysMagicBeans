@@ -31,7 +31,7 @@ public class MainGamePanel extends SurfaceView implements SurfaceHolder.Callback
         ContextHolder contextHolder = new ContextHolder(context);
         setGestures(context);
         mGameController = new GameController(this);
-        mCurrentBoard = mGameController.loadBoard(BoardTypeEnum.GAME_LEVEL);
+        mCurrentBoard = mGameController.getCurrentBoard();
 
     }
 

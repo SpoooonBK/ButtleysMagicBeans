@@ -51,4 +51,14 @@ public class BeanStageWidget extends BoardWidget implements CharacterStage {
     public void draw(Canvas canvas) {
         bean.draw(canvas);
     }
+
+    @Override
+    public void setStartingCoordinates() {
+
+    }
+
+    @Override
+    public void setStartingCoordinates(int X, int Y) {
+
+    }
 }

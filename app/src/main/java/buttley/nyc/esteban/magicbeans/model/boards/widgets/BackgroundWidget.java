@@ -40,6 +40,16 @@ public class BackgroundWidget extends BoardWidget {
         canvas.drawBitmap(mBackgroundMap.get(BackgroundNames.BATHROOM),0,0,null);
     }
 
+    @Override
+    public void setStartingCoordinates() {
+
+    }
+
+    @Override
+    public void setStartingCoordinates(int X, int Y) {
+
+    }
+
     public enum BackgroundNames {
         BATHROOM
     }

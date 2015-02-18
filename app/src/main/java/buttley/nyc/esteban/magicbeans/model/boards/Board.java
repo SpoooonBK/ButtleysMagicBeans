@@ -2,6 +2,7 @@ package buttley.nyc.esteban.magicbeans.model.boards;
 
 import android.graphics.Canvas;
 
+import buttley.nyc.esteban.magicbeans.model.boards.widgets.BoardWidget;
 import buttley.nyc.esteban.magicbeans.model.boards.widgets.WidgetPool;
 
 /**
@@ -21,6 +22,8 @@ public abstract class Board {
     public void setmBoardType(BoardTypeEnum mBoardType) {
         this.mBoardType = mBoardType;
     }
+//TODO SET WIDGET PLACEMENT
+    public abstract void placeWidgets();
 
     public abstract void draw(Canvas canvas);
 
